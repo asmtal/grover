@@ -10,11 +10,10 @@ terraform {
 provider "aws" {
   region                   = var.region
   shared_credentials_files = ["~/.aws/credentials"]
-  profile                  = "prd-terraform-deployer"
+  profile                  = "stg-terraform-deployer"
   default_tags {
     tags = {
       Owner = "terraform"
-      Env   = "${var.environment}"
     }
   }
 }

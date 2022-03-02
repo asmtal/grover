@@ -8,8 +8,6 @@ variable "region" {
   description = "region où vont etre deployé les ressources aws [eu-west-3 par exemple]"
 }
 
-#VPC
-
 variable "vpc_cidr" {
   type        = string
   description = "Plage d'adressage pour le VPC"
@@ -62,6 +60,10 @@ variable "fargate_cpu" {
   description = "cpu allocation for container"
 }
 
+# variable "iam_role" {
+#   type        = string
+#   description = "IAM ECS Role Arn"
+# }
 
 #LB
 variable "lb_tg_port" {
