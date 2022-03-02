@@ -48,6 +48,10 @@ variable "fargate_cpu" {
   description = "cpu allocation for container"
 }
 
+variable "iam_role" {
+  type        = string
+  description = "IAM ECS Role Arn"
+}
 
 #LB
 variable "lb_tg_port" {

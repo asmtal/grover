@@ -28,11 +28,11 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
   network_mode             = "awsvpc"
   memory                   = var.fargate_memory
   cpu                      = var.fargate_cpu
-  # execution_role_arn       = var.iam_role
-  # task_role_arn            = var.iam_role
+  execution_role_arn       = var.iam_role
+  task_role_arn            = var.iam_role
 
   tags = {
-    Name        = "${var.environment}-ecs-task"
+    Name        = "${var.environment}-${var.app_name}-ecs-task"
     Environment = var.environment
   }
 }
